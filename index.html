@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .completed{ color: #5cb85c;
+            text-decoration: line-through; }
+    </style>
+</head>
+
+<!--
+ v-for
+事件绑定
+methods
+ -->
+<body>
+<nav class="navbar navbar-default navbar-static-top panel-heading">Vue js 2.0</nav>
+<div class="container" id="app">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Welcome Vue js 2.0 Tutorial</div>
+                <div class="panel-body">
+                    <h1>MY todos{{todoCount}}</h1>
+                    <ul class="list-group">
+                        <li class="list-group-item"
+                            v-bind:class="{'completed' : todo.completed }"
+                            v-for="todo,index in todos">
+                            {{todo.title}}
+                            <button class="btn btn-warning btn-xs pull-right"
+                                    v-on:click="deleteTodo(index)"
+                            >Delete</button>
+                            <button class="btn btn-xs pull-right"
+                                    v-bind:class="[todo.completed ? 'btn-danger' : 'btn-success' ]"
+                                    v-on:click="toggleCompletion(todo)"
+                            >{{todo.completed ? 'undo' : 'completed' }}</button>
+                        </li>
+                    </ul>
+                    <form v-on:submit.prevent="addTodo(newTodo)">
+                        <div class="form-group">
+                            <input type="text"
+                                   v-model="newTodo.title"
+                                   class="form-control"
+                                   placeholder="Add a new todo">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success" type="submit">add Todo</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            message:'Hello World!',
+            todos:[
+                {id:1,title:'Learn Vuejs',completed:false},
+                {id:2,title:'Learn Vuejs 1',completed:true}
+            ],
+            newTodo:{id:null,title:'',completed:false}
+        },
+        computed:{
+            todoCount:function () {
+                return this.todos.length;
+            }
+        },
+        methods:{
+            addTodo:function (newTodo) {
+                this.todos.push(newTodo);
+                this.newTodo = {id:null,title:'',completed:false};
+                console.log(this.todos);//其实id没什么卵用
+            },
+            deleteTodo:function (index) {
+                this.todos.splice(index,1)
+            },
+            toggleCompletion:function (todo) {
+                todo.completed = !todo.completed
+            }
+        }
+    })
+</script>
+</body>
+</html>
