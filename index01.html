@@ -58,8 +58,8 @@
                     <tr>
                       <td v-for="(item, index) in productList">
                         <div class="direction">
-                          <span class="fl"><a title="向左移" href="javascript:goR(1)">←向左移</a></span>
-                          <span class="fr"><a title="向右移" href="javascript:goR(1)">向右移→</a></span>
+                          <span class="fl"><a title="向左移" href="#" @click="goL(index)">←向左移</a></span>
+                          <span class="fr"><a title="向右移" href="#" @click="goR(index)">向右移→</a></span>
                         </div>
                         <ul class="ulPic pro1">
                           <li>
