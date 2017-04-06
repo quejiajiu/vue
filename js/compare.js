@@ -42,9 +42,17 @@
                 this.productList.push(newTodo);
                 this.newTodo = {id:null,productImage:0,productName:0};
             },
-
+      goL:function (index) {
+          this.productList.moveArr(index,'l');
+      },
+      goR:function (index) {
+          this.productList.moveArr(index);
+      },
     }
 
   });
-
- //console.log(vm.methods);
+ Array.prototype.moveArr = function(ind,str){
+  var i = str == 'l' ? -1 : 1;    
+  if((ind <= 0 && i == -1) || (i == 1 && ind >= this.length-1))return false;
+  this[ind] = this.splice(ind+i,1,this[ind])[0];
+ }
