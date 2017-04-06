@@ -1,0 +1,138 @@
+{
+  "status":1,
+  "result":{
+    "list":[
+      {
+        "productId":"1",
+        "productName":"华为p9",
+        "productPrice":1900,
+        "productImage":"http://2d.zol-img.com.cn/product/179_160x120/729/ceBVDXEYKSYU.jpg",
+        "birthday":[
+          {
+            "names": "基本参数",
+            "birthTime":"2016-10-20",
+            "birthType":"4G手机，3G手机，智能手机，拍照手机，平板手机"
+          }
+        ],
+        "screen":[
+          {
+            "names": "屏幕",
+            "screenType":"多点触控",
+            "screenSize":"5.2英寸",
+            "screenPx":"1920x1080像素",
+            "screenJs":"超灵敏触摸，康宁大猩猩玻璃",
+            "screenBorder":"3.7mm"
+          }
+        ],
+        "system":[
+          {
+            "names": "硬件参数",
+            "systemType":"Android 6.0",
+            "battery":"2900mAH",
+            "batteryType":"不可拆卸式电池",
+            "CPU":"麒麟950 2.3GHz(8核)"
+          }
+        ]
+      },
+      {
+        "productId":"2",
+        "productName":"华为p10",
+        "productPrice":2000,
+        "productImage":"http://2b.zol-img.com.cn/product/177_160x120/449/cePWLs2Zw5hSg.jpg",
+        "birthday":[
+          {
+            "names": "基本参数",
+            "birthTime":"2017-10-20",
+            "birthType":"4G手机，3G手机，智能手机，拍照手机，平板手机，快充手机"
+          }
+        ],
+        "screen":[
+          {
+            "names": "屏幕",
+            "screenType":"多点触控",
+            "screenSize":"5.2英寸",
+            "screenPx":"1920x1080像素",
+            "screenJs":"In-Cell全贴合技术",
+            "screenBorder":"3.05mm"
+
+          }
+        ],
+        "system":[
+          {
+            "names": "硬件参数",
+            "systemType":"iOS 10",
+            "battery":"2900mAH",
+            "batteryType":"不可拆卸式电池",
+            "CPU":"苹果A10 2.23GHz(4核)"
+          }
+        ]
+      },
+      {
+        "productId":"1",
+        "productName":"华为p9",
+        "productPrice":1900,
+        "productImage":"http://2d.zol-img.com.cn/product/179_160x120/729/ceBVDXEYKSYU.jpg",
+        "birthday":[
+          {
+            "names": "基本参数",
+            "birthTime":"2016-10-20",
+            "birthType":"4G手机，3G手机，智能手机，拍照手机，平板手机"
+          }
+        ],
+        "screen":[
+          {
+            "names": "屏幕",
+            "screenType":"多点触控",
+            "screenSize":"5.2英寸",
+            "screenPx":"1920x1080像素",
+            "screenJs":"超灵敏触摸，康宁大猩猩玻璃",
+            "screenBorder":"3.7mm"
+          }
+        ],
+        "system":[
+          {
+            "names": "硬件参数",
+            "systemType":"Android 6.0",
+            "battery":"2900mAH",
+            "batteryType":"不可拆卸式电池",
+            "CPU":"麒麟950 2.3GHz(8核)"
+          }
+        ]
+      },
+      {
+        "productId":"2",
+        "productName":"华为p10",
+        "productPrice":2000,
+        "productImage":"http://2b.zol-img.com.cn/product/177_160x120/449/cePWLs2Zw5hSg.jpg",
+        "birthday":[
+          {
+            "names": "基本参数",
+            "birthTime":"2017-10-20",
+            "birthType":"4G手机，3G手机，智能手机，拍照手机，平板手机，快充手机"
+          }
+        ],
+        "screen":[
+          {
+            "names": "屏幕",
+            "screenType":"多点触控",
+            "screenSize":"5.2英寸",
+            "screenPx":"1920x1080像素",
+            "screenJs":"In-Cell全贴合技术",
+            "screenBorder":"3.05mm"
+
+          }
+        ],
+        "system":[
+          {
+            "names": "硬件参数",
+            "systemType":"iOS 10",
+            "battery":"2900mAH",
+            "batteryType":"不可拆卸式电池",
+            "CPU":"苹果A10 2.23GHz(4核)"
+          }
+        ]
+      }
+    ]
+  },
+  "message":""
+}
