@@ -40,7 +40,7 @@
       },
       addTodo:function (newTodo) {
                 this.productList.push(newTodo);
-                this.newTodo = {id:null,title:'',completed:false};
+                this.newTodo = {id:null,productImage:0,productName:0};
             },
 
     }
