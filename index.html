@@ -56,8 +56,8 @@
 				        <dt class="am-accordion-title"> 我的日志 </dt>
 				        <dd class="am-accordion-bd am-collapse am-in">
 				          <div class="am-accordion-content" id="suerCrticle">
-				              <ol v-for="todo in myCrticle">
-				              	<li> <a href="javascript:void(0)" v-on:click="onClickCrticle(todo.crticleUrl)"> {{todo.crticleName}} </a></li>
+				              <ol>
+				              	<li  v-for="todo in myCrticle"> <a href="javascript:void(0)" v-on:click="onClickCrticle(todo.crticleUrl)"> {{todo.crticleName}} </a></li>
 				              </ol>
 				          </div>
 				        </dd>

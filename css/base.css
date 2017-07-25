@@ -11,3 +11,4 @@ main{background: #e5e5e5;padding-top: 1px;}
 .mainBox .panelLeft{float: left;width: 250px;min-height: 500px;margin-right: -250px; border:1px solid #ddd;position: relative;}
 .mainBox .panelMain{width: 100%;min-height: 500px;padding-left: 250px;}
 .person-info .person-sign{font-size: 12px;margin-top: 10px;}
+#suerCrticle li{line-height: 35px;}
