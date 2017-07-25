@@ -1,0 +1,13 @@
+header,.mainBox{max-width: 1200px;margin: 0 auto;}
+header ul{height: 47px;}
+header ul li{line-height: 45px;font-size: 16px;}
+header ul li:hover,header ul li.active{border-bottom: 2px solid #dc30cc;}
+main{background: #e5e5e5;padding-top: 1px;}
+.mainBox .panelTop,.mainBox .panelLeft,.mainBox .panelMain{background: #fff;margin-top: 10px;border: 1px solid #dcdcdc;}
+.mainBox .panelTop{height: 182px;}
+.mainBox .panelTop .userHead{width: 150px;height: 150px;margin: 15px 30px 15px 20px;float: left;}
+.mainBox .panelTop .person-info{max-width: 700px; height: 150px;margin: 15px 30px 15px 20px;float: left;}
+.mainBox .panelTop .person-info .person-detail span{margin-right: 10px;}
+.mainBox .panelLeft{float: left;width: 250px;min-height: 500px;margin-right: -250px; border:1px solid #ddd;position: relative;}
+.mainBox .panelMain{width: 100%;min-height: 500px;padding-left: 250px;}
+.person-info .person-sign{font-size: 12px;margin-top: 10px;}
