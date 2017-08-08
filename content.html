@@ -2,4 +2,42 @@
 	<h4>
 		欢迎来到个人主页，
 	</h4>
+	<div class="chatInterface" id="sendBox">
+		<div class="l"></div>
+		<div class="m">
+			<p v-for="stat in stats" v-bind:class="[stat.label ? 'users'  : 'user']"><span>{{stat.value}}</span></p>
+		</div>
+		<div class="t">
+			<textarea name="" id="sendTextarea" v-model="newLabel"></textarea>
+			<button class="send" @click="send">发送</button>
+		</div>
+	</div>
+	<script>
+		var stats = [
+		  { label: false, value: '欢迎您！' },
+		];
+
+		new Vue({
+		  el: '#sendBox',
+		  data: {
+		    newLabel: '',
+		    stats: stats
+		  },
+		  methods: {
+		    send: function (e) {
+		      e.preventDefault()
+		      if (!this.newLabel) return
+		      this.stats.push({
+		        label: true,
+		        value: this.newLabel
+		      },{
+		        label: false,
+		        value: '我啥也不知道~'
+		      })
+		      this.newLabel = ''
+		      $('#sendTextarea').focus();
+		    }    
+		  }
+		})
+	</script>
 </div>
