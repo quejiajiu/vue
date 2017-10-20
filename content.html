@@ -16,6 +16,7 @@
 		var stats = [
 		  { label: false, value: '欢迎您！' },
 		];
+		var arrQA = ['我啥也不知道','你好，我是机器人小冰','请问有什么可以帮助你吗?','对不起，我不清楚你的问题','谢谢，再见！'];
 
 		new Vue({
 		  el: '#sendBox',
@@ -32,7 +33,7 @@
 		        value: this.newLabel
 		      },{
 		        label: false,
-		        value: '我啥也不知道~'
+		        value: arrQA.mathFloor()
 		      })
 		      this.newLabel = ''
 		      $('#sendTextarea').focus();

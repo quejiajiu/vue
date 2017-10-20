@@ -57,6 +57,7 @@ function strToJson(str){
   return json; 
 }
 function assVue(s,d,m){
+  if(!$(s).length)return false;
   var app = new Vue({
     el: s,
     data:d,
@@ -98,3 +99,23 @@ Vue.component('anchored-heading', {
     }
   }
 })
+Array.prototype.mathFloor = function() {
+ return this[Math.floor(Math.random()*this.length)];
+};
+/* tips 提示 */
+function tips(t,e,s) {
+    var s = s || 300,e = e || 1000,$t = $('<div class="tips" style="max-width:70%;text-align:center;padding:1rem;position:fixed;top:50%;left:50%;background:rgba(0,0,0,.8);color:#fff;border-radius:10px;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);z-index:99999999;display:none;">'+t+'</div>');
+    if($('body').find('.tips').length){
+        setTimeout(function () {
+            tips(t,e,s);
+        },e+s);
+    }else{
+        $t.appendTo('body').fadeIn(s,function () {
+            setTimeout(function () {
+                $t.fadeOut(s,function () {
+                    $t.remove();
+                });
+            },e);
+        });
+    }
+};

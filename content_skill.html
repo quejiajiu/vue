@@ -1,0 +1,16 @@
+<div class="content" id="skillBox"  style="padding: 10px;">
+	<h4>
+		{{ title }}
+	</h4>
+	{{ content }}
+	
+</div>
+<script>
+	var skillBox = new Vue({
+		  el: '#skillBox',
+		  data: {
+		    title: 'vue的store是什么',
+		    content: '简单点将就是存数据的一个地方，同时还提供了相应的操作，有点类似service的作用，详细的内容你自己百度 vuex 相关，我简单做一个介绍（我用的手脚架）：store里面有4个核心内容，State、Getters、Mutations和Actions，我的理解是这样的（可能有点粗浅，你将就着看看）State是存数据用的，Getters有点类似计算属性，进行简单的逻辑计算，Mutations是一些简单的方法，又来改变state，官方说法是“更改 Vuex 的 store 中的状态的唯一方法是提交 mutation”，Actions是较为复杂的方法，并不能直接改变状态，而是提交mutations，可以包含任意异步操作。我写的一个简单的store文件，将他抛出来之后一般我们会将它Modules分割，避免太多造成混乱'
+		  },		    
+		})
+</script>
