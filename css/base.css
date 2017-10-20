@@ -20,7 +20,7 @@ main{background: #e5e5e5;padding-top: 1px;}
 .chatInterface .l{width: 100px;border-right: 1px solid #ddd;}
 .chatInterface .m{width: 398px;padding:10px 5px;overflow: auto;}
 .chatInterface .t textarea{width: 100%;height: 73px;border: none;padding-left: 10px;resize:none;outline:none;}
-.chatInterface .t .send{float: right;margin: 0 5px 5px;}
+.chatInterface .t .send{float: right;margin: 0 0 5px;border-color:#fff;font-size: 12px;padding: 3px 12px;color: #4e79ab}
 .chatInterface .m .user span,
 .chatInterface .m .users span{padding:0 10px;font-size: 14px;border: 1px solid #dedede;background: #fdfdfd;border-radius: 4px;display: inline-block;}
 .chatInterface .m .users span{float: right;}
