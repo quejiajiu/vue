@@ -36,7 +36,9 @@
 		        value: arrQA.mathFloor()
 		      })
 		      this.newLabel = ''
-		      $('#sendTextarea').focus();
+		      var _sendBox = $('#sendBox .m');
+		      setTimeout(function(){_sendBox.scrollTop( _sendBox[0].scrollHeight +1000);},10)		
+		      $('#sendTextarea').focus();      
 		    }    
 		  }
 		})
