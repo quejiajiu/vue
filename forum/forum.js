@@ -1,4 +1,16 @@
 (function($){
+   var store = new Vuex.Store({
+	  state: {
+	    showhide: '全球工单系统',
+	    isActive:false,
+	  },
+	  mutations: {
+	    increment (state,the) {
+	      state.showhide = the
+	    }
+	  }
+	})
+
    var data = {commentList:
 	   	[
 	      {
@@ -131,7 +143,7 @@
 	      },
 	      {
 	      	'text'	:'Javascript 组合算法的问题',
-	        'the' 	:'avaScript',
+	        'the' 	:'javaScript',
 	        'user'  :'rogwan ',
 	        'time'  :'2 小时 7 分钟前',
 	        'head'  :'191778_normal.png',
@@ -180,7 +192,15 @@
 	      	head:'lang_zhcn_32.png',
 	      	text:'	让我们再来说说杭州房子的问题。'
 	      }
-	   ]
+	   ],
+	   switchs:[
+	   	  {text:'技术',the:'全球工单系统',isActive:true},
+	   	  {text:'创意',the:'程序员',isActive:false},
+	   	  {text:'好玩',the:'javaScript',isActive:false},
+	   	  {text:'最热',the:'Python',isActive:false},
+	   	  {text:'全部',the:'allinwonder',isActive:false},
+	   ],
+	   hotnode:['问与答','分享发现','酷工作','程序员','macOS','分享创造','Python','iPhone','Android','Apple','宽带症候群','求职','MacBook Pro']
 	};
    var tmpList  = {
 	  props: ['text','the','user','time','head','reply'],
@@ -205,9 +225,9 @@
 	      this.$emit('tolink')
 	    }
 	  },
-	  // data: function () {
-	  //   return data
-	  // }
+	  data: function () {
+	    return (store.state.showhide = this.the);
+	  }
 	},
 	sideList = {
 		props: ['text','head'],
@@ -221,17 +241,29 @@
 	         </tr> 
 	        </tbody>
 	       </table> `
-	}
-	var boxList = new Vue({
+	},
+	switchs = {
+		props: ['text','the','onswitch','isActive'],
+		// template: '<a href="#" class="tab" :class="{tab_current:isActive}" @click="onswitch" >{{text}}</a>',
+		template: '<a href="#" class="tab" :class="{tab_current:isActive}" @click="isActive = !isActive" >{{text}}</a>',
+		data:function(){
+			return {isActive:true}
+		}
+	},
+	boxList = new Vue({
 		el: '#boxList',
 		data: data,
-		components: {'my-conlist': tmpList, 'my-sidelist':sideList},
+		components: {'my-conlist': tmpList, 'my-sidelist':sideList, 'my-switch':switchs},
 		methods: {
 		    tolink: function (x) {
 		       store.commit('setSkill',boxList.myCrticle[x]);
 		       Vue.set(skillBox,'title',   boxList.myCrticle[x].title);
 		       Vue.set(skillBox,'content', boxList.myCrticle[x].content);
 		       // store.getters.setSkill(boxList.myCrticle[x]);
+		    },
+		    onswitch:function(el){
+		    	console.log($(this))
+		    	store.commit('increment',el.textConten);
 		    }
 		}
 	})
